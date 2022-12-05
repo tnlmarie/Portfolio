@@ -1,0 +1,293 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.left {
+  width: 60%;
+  height: 100%;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+  z-index: -1;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 50px;
+  height: 50%;
+}
+
+.title:hover {
+  animation-name: bamboula;
+  animation-duration: 0.01s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bamboula {
+  0% {
+    scale: 1;
+    background: -webkit-linear-gradient(rgb(222, 89, 158), rgb(213, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    scale: 1.1;
+    background: -webkit-linear-gradient(rgb(231, 144, 248), rgb(136, 39, 226));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    scale: 0.8;
+    background: -webkit-linear-gradient(rgb(144, 170, 248), rgb(48, 39, 226));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+button {
+  border-radius: 4px;
+  color: #ffff;
+  background-color: black;
+  border: 1px solid #fff;
+  height: 100px;
+  width: 180px;
+  font-size: smaller;
+}
+
+button:hover {
+  color: black;
+  background-color: #ffff;
+  border: 1px solid black;
+  font-weight: 100;
+}
+
+.contact {
+  color: rgb(191, 191, 191);
+  margin-left: 50px;
+}
+
+.right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.pdp {
+  width: 100px;
+  height: 120px;
+  border-radius: 100%;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: xxx-large;
+}
+
+h2 {
+  font-weight: 200;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 200;
+  font-size: medium;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 750px) {
+  body {
+    display: block;
+    flex-direction: column;
+  }
+
+  .left {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0%;
+  }
+
+  .logo {
+    margin: 0%;
+  }
+
+  .content {
+    margin: 0%;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact {
+    margin: 0%;
+  }
+  .right {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 15px;
+  }
+
+  .buttons {
+    gap: 30px;
+  }
+
+  button {
+    border-radius: 4px;
+    color: #ffff;
+    background-color: black;
+    border: 1px solid #fff;
+    height: 80px;
+    width: 150px;
+    font-size: smaller;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: xx-large;
+  }
+
+  h2 {
+    font-weight: 100;
+  }
+
+  h3 {
+    font-weight: 200;
+  }
+
+  p {
+    font-weight: 100;
+    font-size: medium;
+  }
+}
